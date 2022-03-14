@@ -7,5 +7,11 @@ description = "Source of wolfSSL and logic to build it"
 license = "MIT/Apache-2.0"
 repository = "https://github.com/m10io/wolfssl-src-rs"
 
+[features]
+# Use wolfssl520 submodule
+wolfssl520 = []
+# Use wolfssl470 submodule
+wolfssl470 = []
+
 [dependencies]
 bitflags = "1.2"

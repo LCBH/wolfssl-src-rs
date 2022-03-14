@@ -42,7 +42,13 @@ pub struct UserTime {
 pub struct UserTicks {}
 
 pub fn source_dir() -> PathBuf {
-    Path::new(env!("CARGO_MANIFEST_DIR")).join("wolfssl")
+    Path::new(env!("CARGO_MANIFEST_DIR")).join(if cfg!(feature = "wolfssl520") {
+        "wolfssl520"
+    } else if cfg!(feature = "wolfssl470") {
+        "wolfssl470"
+    } else {
+        "wolfssl"
+    })
 }
 
 pub fn version() -> &'static str {
