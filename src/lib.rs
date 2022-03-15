@@ -43,6 +43,7 @@ pub struct UserTicks {}
 
 pub fn source_dir() -> PathBuf {
     Path::new(env!("CARGO_MANIFEST_DIR")).join(if cfg!(feature = "wolfssl520") {
+        println!("VERSION wolfssl520!\n");
         "wolfssl520"
     } else if cfg!(feature = "wolfssl470") {
         "wolfssl470"

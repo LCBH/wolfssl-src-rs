@@ -12,6 +12,7 @@ repository = "https://github.com/m10io/wolfssl-src-rs"
 wolfssl520 = []
 # Use wolfssl470 submodule
 wolfssl470 = []
+sancov = [] # TODO: propagate this (changes nothing for now, for a successful build)
 
 [dependencies]
 bitflags = "1.2"
